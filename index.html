@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Populate Grid Boxes from Google Sheet</title>
+<style>
+.GenusName{
+width:20%;
+}
+</style>
 </head>
 <body>
     <div class="gridbox">
@@ -472,12 +477,12 @@
             // Loop through each row in the table (skip the header row)
             for (let i = 1; i < table.rows.length; i++) {
                 const row = table.rows[i];
-                const familyName = row.cells[0].textContent;
-                const genusName = row.cells[1].textContent;
-                const imageUrl = row.cells[2].textContent;
-                const imageSource = row.cells[3].textContent;
-                const location = row.cells[4].textContent;
-                const buttonLabel = row.cells[5].textContent;
+                const familyName = row.cells[1].textContent;
+                const genusName = row.cells[2].textContent;
+                const imageUrl = row.cells[3].textContent;
+                const imageSource = row.cells[4].textContent;
+                const location = row.cells[5].textContent;
+                const buttonLabel = row.cells[6].textContent;
 
                 // Populate the gridbox elements with data
                 gridboxes[i - 1].querySelector('.FamilyName').textContent = familyName;
